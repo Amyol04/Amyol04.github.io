@@ -1,1 +1,101 @@
 body { background-image:url('https://thumbs.gfycat.com/CompetentWeirdAstrangiacoral-size_restricted.gif'); background-repeat:repeat; }
+
+.center {
+    max-width: 100%;
+}
+
+.link-text {
+    font-family: Courier;
+    color: Black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.head-img {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+.container-fluid {
+    padding: 0px
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column  {
+    float: left;
+    width: 50%;
+}
+
+.TextColumn {
+
+     float: center;
+    width: 50%;
+
+}
+
+.row {
+    margin: 0px;
+    max-width: 100%;
+}
+
+.text {
+    margin: 0px;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+.navbar {
+
+    border-radius: 15px;
+    overflow: hidden; /* Hide overflow */
+    background-color: rgba(51, 51, 51, 0.39); /* Dark background color */
+  }
+
+
+  /* Style the navigation bar links */
+  .navbar a {
+
+    text-align: center; /* Center the text */
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    padding: 30px 30px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+ 
+
+  }
+  
+  /* Change color on hover/mouse-over */
+  .navbar a:hover {
+    background-color: rgb(222, 174, 174); /* Grey background color */
+    color:black; /* Black text color */
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h4{
+
+    text-align: center
+
+  }
+
+  p{
+
+    text-align: center;
+  }
