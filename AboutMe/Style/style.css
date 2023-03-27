@@ -1,9 +1,10 @@
 body {
-     background-image: url("../Images/AdobeStock_229584029-1024x593-1-1024x512.jpeg");
-    background-repeat: repeat-x;
-   background-size: cover;
-    background-color: #cccccc;
-    overflow: hidden;
+	min-height: 100vh;
+	background-image: url("../Images/AdobeStock_229584029-1024x593-1-1024x512.jpeg");
+	background-repeat: repeat-x;
+	background-size: cover;
+	background-color: #cccccc;
+	overflow: hidden;
 
    }
 
