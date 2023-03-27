@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    background-image: url("Main/images/cover.jpg");
+    background-image: url("../Images/cover.jpg");
     background-repeat: repeat-x;
    background-size: cover;
     background-color: #cccccc;
