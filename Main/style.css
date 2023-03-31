@@ -4,10 +4,12 @@ body {
     background-repeat: repeat-x;
    background-size: cover;
     background-color: #cccccc;
-    overflow: hidden;
 
    }
-
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 #nav_bar .nav_button {
     display:inline-block;
     list-style: none;
