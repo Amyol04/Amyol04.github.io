@@ -4,7 +4,8 @@ body {
     background-repeat: repeat-x;
    background-size: cover;
     background-color: #cccccc;
-
+    overflow:hidden;
+    
    }
 
 html {
