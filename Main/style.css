@@ -79,3 +79,14 @@ p{
     position: absolute;
     min-width: 100%;
 }
+.backgrnd{
+
+    height: auto;
+    border-radius: 15%;
+    margin: 0 auto; /* set left and right margins to auto */
+    text-align: center; /* center text within div */
+    background-color: #ffffffcf;
+    width: 60%;
+    padding: 0%;
+
+}
