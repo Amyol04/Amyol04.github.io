@@ -52,7 +52,7 @@ main{
 
 img{
     height:10%;
-    width: 10%;
+    width: 15%;
 }
 
 
@@ -73,6 +73,7 @@ p{
     font-family: 'Courier New', monospace;
 }
 .logo{
+    width:10%;
     text-align: left;
     margin-top: 20px;
     position: absolute;
