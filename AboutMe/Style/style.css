@@ -32,13 +32,28 @@ html {
     list-style: none;
 
 }
+.column {
+    width: 20%;
+    height: 200%;
+    background-color: #cccccc9c;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.5s;
+}
 
+.column:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px #ec67d8;
+}
+.Ring{
+    height: inherit;
+    width:100%;
+}
 nav{
     text-align: center;
     padding-top: 2%;
     margin-top: -50px;
 }
-
 a {
     color: white;
     font-size: larger;
@@ -63,14 +78,14 @@ footer{
 }
 
 h1{
+    text-align: center;
     font-family: 'Courier New', monospace;
     font-size: xx-large;
 	color:white;
 }
 p{
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 10%;
+    padding-left: 6%;
+    padding-right: 6%;
     text-align: center;
     font-size: larger;
     font-family: 'Courier New', monospace;
