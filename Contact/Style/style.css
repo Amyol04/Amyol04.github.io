@@ -7,6 +7,24 @@ body {
 
    }
 
+#nav_bar .nav_button {
+    display:inline-block;
+    list-style: none;
+
+}
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+    width: 0.0em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+  }
+
 nav{
     text-align: center;
     padding-top: 2%;
