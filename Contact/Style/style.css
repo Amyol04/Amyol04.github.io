@@ -4,6 +4,7 @@ body {
     background-repeat: repeat-x;
    background-size: cover;
     background-color: #cccccc;
+    overflow: hidden;
 
    }
 
@@ -12,18 +13,6 @@ body {
     list-style: none;
 
 }
-/* Hide the scrollbar */
-::-webkit-scrollbar {
-    width: 0.0em;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #c1c1c1;
-  }
 
 nav{
     text-align: center;
