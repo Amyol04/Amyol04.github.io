@@ -1,0 +1,83 @@
+body {
+    min-height: 100vh;
+    background-image: url("../Images/valley-landscape-aesthetic-mountains-gradient-background-3440x1440-4589.jpg");
+    background-repeat: repeat-x;
+   background-size: cover;
+    background-color: #cccccc;
+    overflow:hidden;
+    
+   }
+
+html {
+  overflow-x: hidden;
+}
+
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 0.0em;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+}
+
+#nav_bar .nav_button {
+    display:inline-block;
+    list-style: none;
+}
+
+nav{
+    text-align: center;
+    color: black;
+    padding-top: 2%;
+    margin-top: -50px;
+}
+
+a {
+    color: Black;
+    font-size: larger;
+    text-decoration: none;
+  }
+
+
+main{
+
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+img{
+    height:10%;
+    width: 10%;
+}
+
+
+footer{
+
+    text-align: center;
+}
+
+h1{
+    font-family: 'Courier New', monospace;
+    font-size: xx-large;
+}
+p{
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Courier New', monospace;
+}
+.logo{
+    width:10%;
+    text-align: left;
+    margin-top: 20px;
+    position: absolute;
+    min-width: 100%;
+}
