@@ -64,6 +64,7 @@ footer{
 }
 
 h1{
+    color: white;
     font-family: 'Courier New', monospace;
     font-size: xx-large;
 }
@@ -83,7 +84,7 @@ p{
     min-width: 100%;
 }
 .Hugging{
-  texr-alighn: center;
-  border:5%; 
-  border-color:Pink; 
-} 
+  border:40%;
+  border-style: solid;
+  border-color: #e75480;
+}
