@@ -1,1 +1,60 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Revenue Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <center>
+        <h1>Monthly Revenue Tax Calculator</h1>
+    </center>
+    
+    <div class="backgrnd"> 
+        <p>
+            <br>
+            <center>Key Features</center>
+            <ul>
+                <li>Step-by-Step Input: Enter your revenue one month at a time using an easy-to-follow modal dialog.</li>
+                <li>Accurate Tax Calculation: Automatically calculates your tax based on a fixed rate of 12.5% for each month.</li>
+                <li>Detailed Summary: Get a comprehensive overview of your tax information, including the highest, lowest, and average taxes.</li>
+                <li>Important Reminder: Receive a timely alert to ensure you pay your taxes before the January 31st deadline.</li>
+            </ul>
+            <center>How It Works</center>
+            <ul>
+                <li>Enter Your Revenue: Use the input fields to enter your monthly revenue. The modal dialog guides you through each month.</li>
+                <li>Automatic Calculations: The application calculates the tax for each month in real-time.</li>
+                <li>View Results: Once all data is entered, view your tax summary, including key figures and reminders.</li>
+            </ul>
+        </p>
+        <br>
+    </div>
+    
+    <br>
+    <br>
+    <button onclick="startTaxCalculation()">Start Calculation</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-header"></h2>
+            <input type="number" id="revenueInput" placeholder="Enter revenue in EUR">
+            <button onclick="nextMonth()">Next</button>
+        </div>
+    </div>
+
+    <div id="results">
+        <!-- Results will be displayed here -->
+    </div>
+    <div id="warning">
+        <!-- Warning message will be displayed here -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
