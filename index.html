@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="Main/Images/favicon.ico.png">
     </head>
     <body>
+        <div id="particles-js"></div> <!-- This should be inside the body -->
         <br>
         <br>
         <nav>
@@ -20,13 +21,8 @@
             <li class="nav_button" > <a href="https://github.com/Amyol04">Portfolio</a> </li> &nbsp &nbsp;
 
          </ul>
-         <div class ="logo">
-            <IMG src="Main/Images/image_2023-03-01_092031707-removebg-preview.png"  alt="logo"/>
-             </div>
-
 
         </nav>
-<br>
 <br>
         <main>
             <h1>
@@ -38,16 +34,14 @@
             </div>
             
                  <br>
-                
-                <br>
        
 
 <div class="backgrnd"> 
             <p>
                 <br>
-                 Hi, I'm Amy O'Leary, a committed student currently enrolled at MTU Cork. My journey revolves around the fascinating realm of software development. Right now, 
-                I'm diving into Python, drawing from my past experiences with Java. My ultimate goal is to embark on a fulfilling career as a software developer. 
-                If you'd like to get to know me better, please check out the "About me" section at the top of this portfolio webpage.
+                Hi, I'm Amy O'Leary, a software development student at MTU Cork. I'm currently exploring Python,
+                 building on my Java experience, and aiming for a career in software development. 
+                Learn more about me in the "About me" section or connect via my socials at the bottom of the page!
                 <br>
                 <br>
                   You can also check out my socials linked at the bottom of the page!
@@ -69,7 +63,15 @@
 
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS.load('particles-js', '../AboutMe/jsAboutme/particles.json', function() {
+                console.log('callback - particles-js config loaded');
+            });
+        </script>
 
     </body>
 </html>
+
+
 
