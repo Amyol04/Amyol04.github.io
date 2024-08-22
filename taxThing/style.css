@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(236,114,181,1) 26%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, rgb(240, 87, 153) 0%, rgb(235, 60, 156) 26%, rgb(13, 106, 212) 100%);
     position: relative; /* Ensure child elements are positioned relative to body */
 }
 
