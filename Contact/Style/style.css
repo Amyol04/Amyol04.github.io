@@ -57,13 +57,6 @@ p{
     font-family: 'Courier New', monospace;
 
 }
-.logo{
-    text-align: left;
-    margin-top: 20px;
-    position: absolute;
-    min-width: 100%;
-}
-
 p{
 	color:rgb(0, 0, 0);
 }
