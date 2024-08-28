@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Ensure no scrollbars */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgb(240, 87, 153) 0%, rgb(235, 60, 156) 26%, rgb(13, 106, 212) 100%);
+    position: relative; /* Ensure child elements are positioned relative to body */
+}
+
+#particles-js {
+    pointer-events: auto; /* Ensure it can detect pointer events */
+    position: absolute; /* Position it absolutely within body */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it is behind other content */
+}
+
+button {
+    background-color: aqua;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.modal {
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 100; /* Ensure modal is above particles */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #b7b8ff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 10px solid #c719f3;
+    width: 50%;
+    border-radius: 25px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#results, #warning {
+    margin-top: 20px;
+    text-align: center;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #fffcfc33;
+    width: 20%;
+    padding: 0;
+
+}
+
+.backgrnd {
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #fffcfc8a;
+    width: 60%;
+    padding: 0;
+}
