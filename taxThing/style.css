@@ -24,14 +24,16 @@ body {
 }
 
 button {
+    background-color: aqua;
     padding: 10px 20px;
     font-size: 20px;
     display: block;
     margin: 0 auto;
-    border-radius: 10%;
+    border-radius: 25px;
 }
 
 .modal {
+    text-align: center;
     display: none;
     position: fixed;
     z-index: 100; /* Ensure modal is above particles */
@@ -45,11 +47,12 @@ button {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #b7b8ff;
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border: 10px solid #c719f3;
+    width: 50%;
+    border-radius: 25px;
 }
 
 .close {
@@ -69,6 +72,13 @@ button {
 #results, #warning {
     margin-top: 20px;
     text-align: center;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #fffcfc33;
+    width: 20%;
+    padding: 0;
+
 }
 
 .backgrnd {
