@@ -1,3 +1,67 @@
+let currentMonth = 0;
+let monthlyRevenues = [];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const taxRate = 0.125;
+
+function startTaxCalculation() {
+    currentMonth = 0;
+    monthlyRevenues = [];
+    document.getElementById('modal-header').innerText = `Enter revenue for ${months[currentMonth]}`;
+    document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function nextMonth() {
+    const revenueInput = document.getElementById('revenueInput').value;
+
+    if (revenueInput === "") {
+        alert("Please enter a valid revenue amount.");
+        return;
+    }
+
+    monthlyRevenues.push(parseFloat(revenueInput) * taxRate);
+    currentMonth++;
+
+    if (currentMonth < 12) {
+        document.getElementById('modal-header').innerText = `Enter revenue for ${months[currentMonth]}`;
+        document.getElementById('revenueInput').value = "";
+    } else {
+        closeModal();
+        displayResults();
+        remindUserToPayTaxes();
+    }
+}
+
+function displayResults() {
+    const totalTax = monthlyRevenues.reduce((acc, cur) => acc + cur, 0);
+    const highestTax = Math.max(...monthlyRevenues);
+    const lowestTax = Math.min(...monthlyRevenues);
+    const averageTax = totalTax / 12;
+
+    let resultHtml = "<h2>Tax Summary</h2>";
+    resultHtml += "<p>";
+
+    months.forEach((month, index) => {
+        resultHtml += `<li>${month}: €${monthlyRevenues[index].toFixed(2)}</li>`;
+    });
+
+    resultHtml += "</p>";
+    resultHtml += `<p>Highest Tax: €${highestTax.toFixed(2)}</p>`;
+    resultHtml += `<p>Lowest Tax: €${lowestTax.toFixed(2)}</p>`;
+    resultHtml += `<p>Average Tax: €${averageTax.toFixed(2)}</p>`;
+
+    document.getElementById('results').innerHTML = resultHtml;
+}
+
+function remindUserToPayTaxes() {
+    const warningMessage = "<p>Please pay your taxes!!</p>";
+    document.getElementById('warning').innerHTML = warningMessage;
+}
+
+// Particle.js configuration
 particlesJS("particles-js", {
     particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -53,36 +117,3 @@ particlesJS("particles-js", {
     },
     retina_detect: true
 });
-
-var count_particles, stats, update;
-stats = new Stats();
-stats.setMode(0);
-stats.domElement.style.position = "absolute";
-stats.domElement.style.left = "0px";
-stats.domElement.style.top = "0px";
-document.body.appendChild(stats.domElement);
-
-count_particles = document.querySelector(".js-count-particles");
-
-update = function () {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-};
-
-requestAnimationFrame(update);
-
-function startTaxCalculation() {
-    document.getElementById('modal').style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-}
-
-function nextMonth() {
-    // Add functionality to handle month input and calculation
-}
