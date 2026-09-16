@@ -191,7 +191,7 @@ p {
 
 .backgrnd {
   height: auto;
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 0 auto; /* Centers the div horizontally */
   text-align: center; /* Centers text within the div */
   background-color: #1f1e1e47;
