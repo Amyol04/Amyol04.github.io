@@ -63,52 +63,52 @@ if (contactForm) {
       return;
     }
 
-    // STEP 2: Send notification through Web3Forms
-    try {
-      const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: "New Contact Form Message",
-            from_name: "Website Contact Form",
-            name: name,
-            email: email,
-            message: message,
-            replyto: email
-          })
-        }
-      );
+// STEP 2: Send notification through Web3Forms
+try {
+  const response = await fetch(
+    "https://api.web3forms.com/submit",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: "New Contact Form Message",
+        from_name: "Website Contact Form",
+        name: name,
+        email: email,
+        message: message,
+        replyto: email
+      })
+    }
+  );
 
-      const result = await response.json();
+  const result = await response.json();
 
-      if (!response.ok || !result.success) {
-        throw new Error(
-          result.message || "Web3Forms email failed."
-        );
-      }
+  if (!response.ok || !result.success) {
+    throw new Error(
+      result.message || "Web3Forms email failed."
+    );
+  }
 
-      console.log("Notification email sent!");
+  console.log("Notification email sent!");
 
-      // STEP 3: Show success
-      contactForm.reset();
-      
-        window.location.href = "https://jaxxsox.com/thankyou.html";
-      
-      } catch (error) {
-        console.error("Web3Forms error:", error);
-      
-        formResult.textContent =
-          "Your message was saved, but the email notification failed. Please try again later.";
-      
-      } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit";
+  // STEP 3: Redirect to thank-you page
+  contactForm.reset();
+
+  window.location.href = "https://jaxxsox.com/thankyou.html";
+
+} catch (error) {
+  console.error("Web3Forms error:", error);
+
+  formResult.textContent =
+    "Your message was saved, but the email notification failed. Please try again later.";
+
+} finally {
+  submitButton.disabled = false;
+  submitButton.textContent = "Submit";
 }
   });
 }
