@@ -96,20 +96,19 @@ if (contactForm) {
       console.log("Notification email sent!");
 
       // STEP 3: Show success
-      formResult.textContent =
-        "Thank you! Your message has been sent successfully.";
-
       contactForm.reset();
-
-    } catch (error) {
-      console.error("Web3Forms error:", error);
-
-      formResult.textContent =
-        "Your message was saved, but the email notification failed. Please try again later.";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "Submit";
-    }
+      
+        window.location.href = "https://jaxxsox.com/thankyou.html";
+      
+      } catch (error) {
+        console.error("Web3Forms error:", error);
+      
+        formResult.textContent =
+          "Your message was saved, but the email notification failed. Please try again later.";
+      
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit";
+}
   });
 }
