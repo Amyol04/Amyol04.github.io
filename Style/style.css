@@ -1,0 +1,295 @@
+
+/* =========================
+   GENERAL PAGE STYLING
+========================= */
+
+html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+
+    background: radial-gradient(
+        circle,
+        rgba(238, 174, 233, 1) 0%,
+        rgba(236, 114, 124, 1) 45%,
+        rgba(255, 255, 255, 1) 100%
+    );
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================
+   PARTICLE BACKGROUND
+========================= */
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto;
+}
+
+/* Keep website content above particles */
+nav,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    text-align: center;
+    padding-top: 2%;
+    position: relative;
+    z-index: 2;
+}
+
+#nav_bar {
+    padding: 0;
+    margin: 0;
+}
+
+#nav_bar .nav_button {
+    display: inline-block;
+    list-style: none;
+    margin: 0 12px;
+}
+
+a {
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    text-align: center;
+    font-size: larger;
+}
+
+h1 {
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: xx-large;
+}
+
+p {
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Courier New', monospace;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+    max-width: 50%;
+    width: 15%;
+    height: auto;
+}
+
+
+/* =========================
+   COLUMNS
+========================= */
+
+.column {
+    width: 20%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.089);
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.column:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px #ec67d8;
+}
+
+
+/* =========================
+   BACKGROUND CONTENT BOX
+========================= */
+
+.backgrnd {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+    color: #f2f2f2;
+
+
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.089);
+    border-radius: 5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 20px 10px;
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+}
+
+.home-buttons {
+    display: inline-block;
+
+    margin: 0 8px;
+
+    color: white;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home-buttons:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+
+/* =========================
+   PARTICLE COUNTER
+========================= */
+
+.count-particles {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+
+    background: #6a6acc;
+    color: #4ad8d1;
+
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 0 0 3px 3px;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HIDE SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        padding-top: 10%;
+    }
+
+    img {
+        max-width: 30%;
+        width: auto;
+        height: auto;
+    }
+
+    .backgrnd {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .column {
+        width: 80%;
+    }
+
+    p {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
