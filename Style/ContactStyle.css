@@ -1,43 +1,82 @@
-
-/* =========================
-   GENERAL PAGE
-========================= */
-
+/* general page styling */
 * {
     box-sizing: border-box;
 }
 
 html {
     min-height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    font-family: 'Courier New', monospace;
 }
 
 body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Verdana, sans-serif;
 
-    background: radial-gradient(
-        circle,
-        rgba(238, 174, 233, 1) 0%,
-        rgba(236, 114, 124, 1) 45%,
-        rgba(255, 255, 255, 1) 100%
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #302532;
+
+    background: linear-gradient(
+        135deg,
+        #f8d7e6 0%,
+        #f0b2cc 50%,
+        #cd7da5 100%
     );
+
+    overflow-x: hidden;
+    position: relative;
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* particals */
+
+#particles-js {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* content */
+
+nav,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* nav bar*/
 
 nav {
     text-align: center;
-    padding-top: 2%;
+    padding: 15px 10px;
+
     position: relative;
     z-index: 2;
 }
 
 #nav_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -45,151 +84,271 @@ nav {
 #nav_bar .nav_button {
     display: inline-block;
     list-style: none;
-    margin: 0 12px;
+    margin: 0;
 }
 
-a {
-    color: white;
-    font-size: larger;
+nav a {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #553653;
     text-decoration: none;
 
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease,
+                opacity 0.3s ease;
 }
 
-a:hover {
-    opacity: 0.7;
+nav a:hover {
+    color: #FFFFFF;
+    opacity: 0.85;
 }
 
 
-/* =========================
-   CONTACT PAGE
-========================= */
+/* headings */
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 20px 60px;
+h1,
+h2,
+h3 {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-align: center;
+
+    color: #553653;
 }
 
 h1 {
-    font-family: 'Courier New', monospace;
-    font-size: 42px;
-    color: #402c3e;
-    text-align: center;
+    font-size: 38px;
+
     margin: 20px 0 10px;
 }
 
-main p {
-    color: #594454;
-    font-family: Verdana, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: center;
-    max-width: 550px;
-    padding: 0 10px;
-    margin-bottom: 25px;
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
 }
 
 
-/* =========================
-   CONTACT FORM CARD
-========================= */
+/* main */
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 20px 50px;
+    margin: 0;
+}
+
+main p {
+    max-width: 550px;
+
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.7;
+
+    color: #553653;
+
+    text-align: center;
+
+    padding: 0 10px;
+    margin: 0 0 25px;
+}
+
+
+/* =contact form*/
 
 .form-container {
+    display: block;
+
     width: 100%;
-    max-width: 480px;
+    max-width: 450px;
+
+    margin: 15px auto 30px;
     padding: 35px;
 
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(248, 237, 242, 0.85);
+
+    border: 1px solid rgba(85, 54, 83, 0.15);
     border-radius: 18px;
 
-    box-shadow: 0 10px 35px rgba(100, 40, 80, 0.15);
+    box-shadow:
+        0 10px 35px rgba(85, 54, 83, 0.15);
+
+    backdrop-filter: blur(8px);
+
+    transition: box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow:
+        0 14px 40px rgba(85, 54, 83, 0.22);
+
+    transform: translateY(-2px);
 }
 
 
-/* =========================
-   FORM INPUTS
-========================= */
+/* contact form layout */
 
-.form-container label {
-    display: block;
-    color: #493344;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
-.form-control {
-    display: block;
     width: 100%;
-    padding: 13px 15px;
-    margin-bottom: 20px;
+    gap: 10px;
+}
 
-    border: 1px solid #e8c5dc;
+
+/* form lables*/
+
+#contactForm label {
+    display: block;
+
+    width: 100%;
+
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #553653;
+
+    text-align: left;
+
+    margin: 0;
+}
+
+
+/* form input */
+
+.form-control,
+#contactForm input,
+#contactForm textarea {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+    margin: 0 0 12px;
+
+    border: 1px solid #D8A8C0;
     border-radius: 9px;
 
-    background: rgba(255, 255, 255, 0.9);
-    color: #302330;
+    background: rgba(255, 255, 255, 0.85);
 
-    font-family: Verdana, sans-serif;
-    font-size: 14px;
+    color: #302532;
+
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
 
     outline: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+
+    transition: border 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
 }
 
-.form-control:focus {
-    border-color: #dc78b6;
-    box-shadow: 0 0 0 3px rgba(220, 120, 182, 0.15);
+
+/* Input focus effect */
+
+.form-control:focus,
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #553653;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 0 0 3px rgba(85, 54, 83, 0.12);
 }
 
-textarea.form-control {
-    min-height: 130px;
+
+/* Placeholder text */
+
+.form-control::placeholder,
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #947C90;
+    opacity: 0.8;
+}
+
+
+/* Textarea */
+
+#contactForm textarea {
+    min-height: 140px;
     resize: vertical;
 }
 
 
-/* =========================
-   SUBMIT BUTTON
-========================= */
+/* submit button */
 
-.submitButton {
+.submitButton,
+#contactForm button {
+    display: block;
+
     width: 100%;
+
+    margin-top: 8px;
     padding: 14px;
 
-    background: linear-gradient(
-        135deg,
-        #e98bc4,
-        #d75d9f
-    );
+    background: #553653;
 
-    color: white;
+    color: #FFFFFF;
+
+    font-family: 'Courier New', monospace;
     font-size: 16px;
     font-weight: bold;
 
-    border: none;
+    border: 2px solid #553653;
     border-radius: 9px;
 
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition: background 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-.submitButton:hover {
+
+/* Button hover */
+
+.submitButton:hover,
+#contactForm button:hover {
+    background: #C987A8;
+    color: #FFFFFF;
+
+    border-color: #C987A8;
+
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(215, 93, 159, 0.3);
+
+    box-shadow:
+        0 6px 15px rgba(85, 54, 83, 0.2);
 }
 
-.submitButton:disabled {
+
+/* Disabled button */
+
+.submitButton:disabled,
+#contactForm button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    transform: none;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* footer */
+
 footer {
     text-align: center;
 
@@ -206,10 +365,21 @@ footer {
 
     margin: 0 8px;
 
-    color: white;
+    color: #553653;
 
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease,
+                opacity 0.3s ease;
 }
+
+
+/* Footer icon colours */
+
+.home-buttons i {
+    color: #553653 !important;
+}
+
+
+/* Footer hover */
 
 .home-buttons:hover {
     transform: scale(1.2);
@@ -217,132 +387,41 @@ footer {
 }
 
 
+/* scrollbar */
 
-/* =========================
-   MOBILE
-========================= */
+::-webkit-scrollbar {
+    width: 0.4em;
+}
 
-@media screen and (max-width: 600px) {
+::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-    nav {
-        padding: 20px 5px;
-    }
+::-webkit-scrollbar-thumb {
+    background-color: rgba(85, 54, 83, 0.45);
+    border-radius: 10px;
+}
 
-    nav a {
-        margin: 0 7px;
-        font-size: 14px;
+
+/* tablet response*/
+
+@media screen and (max-width: 900px) {
+
+    .form-container {
+        max-width: 450px;
     }
 
     h1 {
-        font-size: 32px;
-    }
-
-    main {
-        padding: 15px 15px 40px;
-    }
-
-    .form-container {
-        padding: 25px 20px;
-    }
-
-    main p {
-        font-size: 14px;
+        font-size: 35px;
     }
 }
 
-/* PARTICLE BACKGROUND */
 
-#particles-js {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* KEEP CONTENT ABOVE PARTICLES */
-
-nav,
-main,
-footer {
-    position: relative;
-    z-index: 1;
-}
-
-/* NAVIGATION RESET */
-
-#nav_bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* MAIN CONTENT POSITION */
-
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 20px 40px;
-    margin: 0;
-}
-
-/* FORM CARD */
-
-.form-container {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    margin: 15px auto 30px;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-/* FORCE VERTICAL FORM LAYOUT */
-
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 10px;
-}
-
-#contactForm label {
-    display: block;
-    width: 100%;
-    margin: 0;
-}
-
-#contactForm input,
-#contactForm textarea {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 12px;
-    padding: 13px;
-}
-
-#contactForm textarea {
-    min-height: 140px;
-}
-
-#contactForm button {
-    display: block;
-    width: 100%;
-    margin-top: 8px;
-}
-
-/* MOBILE LAYOUT */
+/* mobike reponse  */
 
 @media screen and (max-width: 600px) {
+
+    /* Navigation */
 
     nav {
         padding: 15px 8px;
@@ -353,33 +432,105 @@ main {
     }
 
     #nav_bar a {
-        font-size: 13px;
-        margin: 0 3px;
+        font-size: 14px;
     }
 
-    main {
-        padding: 5px 15px 30px;
-    }
 
-    main h1 {
+    /* Headings */
+
+    h1 {
         font-size: 30px;
         margin: 10px 0;
     }
 
-    main p {
-        font-size: 14px;
-        padding: 0 5px;
-        margin-bottom: 10px;
+    h2 {
+        font-size: 23px;
     }
+
+
+    /* Main content */
+
+    main {
+        padding: 5px 15px 35px;
+    }
+
+    main p {
+        font-size: 15px;
+        padding: 0 5px;
+        margin-bottom: 15px;
+    }
+
+
+    /* Form */
 
     .form-container {
         width: 100%;
-        padding: 22px 18px;
+
+        padding: 25px 20px;
+
         margin: 10px auto 20px;
+    }
+
+    #contactForm label {
+        font-size: 14px;
     }
 
     #contactForm input,
     #contactForm textarea {
         font-size: 16px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 5px;
+    }
+
+    .home-buttons {
+        margin: 5px 7px;
+    }
+}
+
+
+/* small screens  */
+@media screen and (max-width: 400px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    main p {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding: 22px 16px;
+    }
+
+    #nav_bar {
+        gap: 7px;
+    }
+
+    #nav_bar a {
+        font-size: 13px;
+    }
+}
+
+
+/* accessability */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
