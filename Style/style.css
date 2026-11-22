@@ -1,7 +1,5 @@
 
-/* =========================
-   GENERAL PAGE STYLING
-========================= */
+/* general page styling*/
 
 html {
     min-height: 100%;
@@ -15,13 +13,13 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Verdana, sans-serif;
+    font-family: 'Courier New', monospace;
 
-    background: radial-gradient(
-        circle,
-        rgba(238, 174, 233, 1) 0%,
-        rgba(236, 114, 124, 1) 45%,
-        rgba(255, 255, 255, 1) 100%
+    background: linear-gradient(
+        135deg,
+        #f8d7e6 0%,
+        #f0b2cc 50%,
+        #cd7da5 100%
     );
 
     overflow-x: hidden;
@@ -29,9 +27,7 @@ body {
 }
 
 
-/* =========================
-   PARTICLE BACKGROUND
-========================= */
+/* particals */
 
 #particles-js {
     position: fixed;
@@ -40,10 +36,11 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
-    pointer-events: auto;
+    pointer-events: none;
 }
 
 /* Keep website content above particles */
+
 nav,
 main,
 footer {
@@ -52,9 +49,7 @@ footer {
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* navigation*/
 
 nav {
     text-align: center;
@@ -74,42 +69,31 @@ nav {
     margin: 0 12px;
 }
 
-a {
-    color: white;
+nav a {
+    color: #553653;
     font-size: larger;
+    font-weight: bold;
     text-decoration: none;
-
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-/* =========================
-   LINKS
-========================= */
-
-a {
-    color: white;
-    font-size: larger;
-    text-decoration: none;
-
-    transition: opacity 0.3s ease;
-}
-
-a:hover {
-    opacity: 0.7;
+nav a:hover {
+    color: #C987A8;
+    opacity: 0.85;
 }
 
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* main content*/
 
 main {
+    position: relative;
+    z-index: 1;
     text-align: center;
     font-size: larger;
 }
 
 h1 {
-    color: white;
+    color: #553653;
     font-family: 'Courier New', monospace;
     font-size: xx-large;
 }
@@ -118,83 +102,77 @@ p {
     padding-left: 15%;
     padding-right: 15%;
     text-align: center;
-    font-size: larger;
+    font-size: large;
+    line-height: 1.6;
     font-family: 'Courier New', monospace;
+    color: #302532;
 }
 
 
-/* =========================
-   IMAGES
-========================= */
+/* images */
 
 img {
     max-width: 50%;
     width: 15%;
     height: auto;
+    border-radius: 8px;
 }
 
 
-/* =========================
-   COLUMNS
-========================= */
+/* columes*/
 
 .column {
     width: 20%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.089);
+    background-color: rgba(248, 237, 242, 0.75);
     display: inline-block;
     margin: 10px;
-    transition: transform 0.5s;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid rgba(85, 54, 83, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .column:hover {
-    transform: scale(1.1);
-    box-shadow: 5px 5px 5px #ec67d8;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(85, 54, 83, 0.2);
 }
 
-
-/* =========================
-   BACKGROUND CONTENT BOX
-========================= */
 
 .backgrnd {
     width: 90%;
     max-width: 600px;
     height: auto;
     margin: 0 auto;
-    padding: 16px;
+    padding: 20px;
     box-sizing: border-box;
-    color: #f2f2f2;
 
-
+    color: #302532;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.089);
-    border-radius: 5px;
+
+    background-color: rgba(248, 237, 242, 0.75);
+    border: 1px solid rgba(85, 54, 83, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(85, 54, 83, 0.12);
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* footer*/
 
 footer {
     text-align: center;
-
     padding: 20px 10px;
-
     position: relative;
     z-index: 2;
-
     width: 100%;
+    box-sizing: border-box;
 }
 
 .home-buttons {
     display: inline-block;
-
     margin: 0 8px;
-
-    color: white;
-
+    color: #553653;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -203,10 +181,12 @@ footer {
     opacity: 0.7;
 }
 
+.home-buttons i {
+    color: #553653 !important;
+}
 
-/* =========================
-   PARTICLE COUNTER
-========================= */
+
+/* particals */
 
 .count-particles {
     position: absolute;
@@ -214,8 +194,8 @@ footer {
     left: 0;
     width: 80px;
 
-    background: #6a6acc;
-    color: #4ad8d1;
+    background: #553653;
+    color: #F8EDF2;
 
     font-size: 0.8em;
     text-align: left;
@@ -223,7 +203,7 @@ footer {
     line-height: 14px;
     padding-bottom: 2px;
 
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Courier New', monospace;
     font-weight: bold;
     border-radius: 0 0 3px 3px;
 }
@@ -246,9 +226,7 @@ footer {
 }
 
 
-/* =========================
-   HIDE SCROLLBAR
-========================= */
+/* hide scrollbar*/
 
 ::-webkit-scrollbar {
     width: 0;
@@ -263,14 +241,20 @@ footer {
 }
 
 
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
+/* mobile repinsiveness */
 
 @media screen and (max-width: 600px) {
 
     nav {
         padding-top: 10%;
+    }
+
+    #nav_bar .nav_button {
+        margin: 5px 7px;
+    }
+
+    nav a {
+        font-size: medium;
     }
 
     img {
@@ -281,15 +265,36 @@ footer {
 
     .backgrnd {
         width: 90%;
-        padding: 10px;
+        padding: 15px;
     }
 
     .column {
         width: 80%;
+        margin: 10px auto;
+        display: block;
     }
 
     p {
         padding-left: 6%;
         padding-right: 6%;
+        font-size: medium;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+}
+
+
+/* accessability */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }
